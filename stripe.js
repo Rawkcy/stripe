@@ -1,6 +1,5 @@
 $(document).ready(function() {
     Stripe.setPublishableKey('pk_test_fCFFStJ1Eum0dKY1FlxmOZbv');
-    console.log("hi");
 
     var stripeHandler = function(status, response) {
         if (response.error) {
@@ -12,7 +11,7 @@ $(document).ready(function() {
             //var token = response['id'];
             //form$.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
             //form$.get(0).submit();
-            console.log("id: ", response['id']);
+            alert("id: ", response['id']);
             console.log("last4: ", response['last4']);
             console.log("created: ", response['created']);
             console.log("card type: ", response['card']['type']);
@@ -27,7 +26,6 @@ $(document).ready(function() {
             exp_month: $('.card-expiry-month').val(),
             exp_year: $('.card-expiry-year').val()
         }, stripeHandler);
-        console.log("something");
     });
 });
 
