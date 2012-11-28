@@ -22,8 +22,14 @@
 	<body id="checkout">
 
         <div class="payment-errors"></div>
-            <button id="search-more" value="search-more"><a href="index.html">Search More</a></button>
-            <button id="confirm" value="Confirm">Confirm</button>
+        <form id="payment-form">
+            Credit Card Number: <input type="text" class="card-number"><br>
+            CVC: <input type="text" class="card-cvc"><br>
+            Expiry Month: <input type="text" class="card-expiry-month"><br>
+            Expiry Year: <input type="text" class="card-expiry-year"><br>
+            <input value="Pay!" id="payment-submit">
+            <!--<input type="submit" value="Pay!" id="payment-submit">-->
+        </form>
 
 		<!-- Scripts -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
